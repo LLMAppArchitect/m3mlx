@@ -31,7 +31,7 @@ def get_generation(input_data: InputData):
             temp=0.7,
             top_p=0.9,
             repetition_penalty=1.2,
-            repetition_context_size=1024,
+            repetition_context_size=2048,
         )
         # 打印结果
         print(response)
