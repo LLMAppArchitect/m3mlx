@@ -1,18 +1,18 @@
 from fastapi import FastAPI, HTTPException
+import uvicorn
 from pydantic import BaseModel
 from mlx_lm import load, generate
 
 # 定义FastAPI应用
 app = FastAPI()
 
-# 加载模型
-model, tokenizer = load("mlx-community/Phi-3-medium-128k-instruct-4bit")
-
+# 加载模型: https://huggingface.co/mlx-community/Mistral-7B-Instruct-v0.3-8bit
+model, tokenizer = load("mlx-community/Mistral-7B-Instruct-v0.3-8bit")
 
 # 定义输入数据的模型
 class InputData(BaseModel):
     prompt: str
-    max_tokens: int = 10000
+    max_tokens: int = 100
     verbose: bool = True
 
 
@@ -26,12 +26,13 @@ def get_generation(input_data: InputData):
             tokenizer,
             prompt=input_data.prompt,
             max_tokens=input_data.max_tokens,
-            verbose=input_data.verbose,
+            verbose=True,
             temp=0.0,
             top_p=1.0,
             # repetition_penalty=1.2,
             # repetition_context_size=1024,
         )
+
         # 打印结果
         print(response)
 
@@ -43,6 +44,4 @@ def get_generation(input_data: InputData):
 
 # 启动服务
 if __name__ == "__main__":
-    import uvicorn
-
     uvicorn.run(app, host="0.0.0.0", port=8000)

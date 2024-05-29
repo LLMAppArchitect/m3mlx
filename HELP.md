@@ -16,7 +16,7 @@ python openchat_api.py
 # Test
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/generate" -H "Content-Type: application/json" -d '{"prompt": "<|user|>使用 golang 实现一个 DAG task scheduler 源代码，并给出详细注释说明<|end|><|assistant|>", "max_tokens":12800, "verbose":true}'
+curl -X POST "http://127.0.0.1:8000/generate" -H "Content-Type: application/json" -d '{"prompt": "使用 golang 实现一个 DAG task scheduler 源代码，并给出详细注释说明", "max_tokens":12800, "verbose":true}'
 
 ```
 

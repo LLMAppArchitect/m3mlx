@@ -28,10 +28,10 @@ def get_generation(input_data: InputData):
             prompt=input_data.prompt,
             max_tokens=input_data.max_tokens,
             verbose=input_data.verbose,
-            temp=0.7,
-            top_p=0.9,
-            repetition_penalty=1.2,
-            repetition_context_size=2048,
+            temp=0.0,
+            top_p=1.0,
+            # repetition_penalty=1.2,
+            # repetition_context_size=2048,
         )
         # 打印结果
         print(response)
