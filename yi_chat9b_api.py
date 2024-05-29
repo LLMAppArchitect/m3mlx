@@ -6,8 +6,8 @@ from mlx_lm import load, generate
 # 定义FastAPI应用
 app = FastAPI()
 
-# 加载模型: https://huggingface.co/mlx-community/Yi-1.5-34B-Chat-4bit
-model, tokenizer = load("mlx-community/Yi-1.5-34B-Chat-4bit")
+# 加载模型: https://huggingface.co/mlx-community/Yi-1.5-9B-Chat-8bit
+model, tokenizer = load("mlx-community/Yi-1.5-9B-Chat-8bit")
 
 
 # 定义输入数据的模型
