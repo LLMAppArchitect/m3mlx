@@ -2,5 +2,9 @@ k:
 	./kill.sh
 w:
 	./write.sh
-run:
-	./run.sh
+
+run_openchat:
+	./run_openchat.sh
+
+run_yichat:
+	./run_yichat.sh
