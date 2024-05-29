@@ -28,6 +28,12 @@ def get_generation(input_data: InputData):
             prompt=input_data.prompt,
             max_tokens=input_data.max_tokens,
             verbose=True,
+
+            # top_p (float, optional): Nulceus sampling, higher means model considers more less likely words (default 1.0).
+            # top_p=1.0,
+
+            # repetition_penalty (float, optional): The penalty factor for repeating tokens.
+            # 1.0: no penalty, 1.2 - 1.5: some repetition penalty, 1.8+: severe repetition penalty.
             # repetition_penalty 是一个用于控制生成文本时重复词汇的惩罚因子。它可以帮助生成更具多样性和连贯性的文本。在设置 repetition_penalty 时，通常的取值范围在 1.0 到 2.0 之间。具体的取值需要根据实际应用场景和模型的表现进行调整。
             # 以下是一些常见的设置和其影响：
             # 1.0: 没有惩罚，模型生成的文本可能会有更多的重复词汇。
@@ -35,6 +41,10 @@ def get_generation(input_data: InputData):
             # 1.5 - 2.0: 较强的惩罚，可以显著减少重复词汇，但可能会影响生成文本的流畅性。
             # 通常，建议从 1.1 开始尝试，并根据生成结果逐步调整。
             repetition_penalty=1.1,
+
+            # repetition_context_size (int, optional):
+            # The number of tokens to consider for repetition penalty (default 20).
+            repetition_context_size=100,
         )
 
         # 打印结果
