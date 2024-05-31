@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python mixtral_api.py
+python api/mixtral_api.py

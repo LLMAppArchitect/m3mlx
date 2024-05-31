@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python mixtral_chinese_api.py
+python api/mixtral_chinese_api.py

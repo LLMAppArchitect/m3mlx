@@ -48,7 +48,7 @@ def get_generation(input_data: InputData):
         )
 
         # 打印结果
-        print(response)
+        # print(response)
 
         # 返回生成结果
         return response

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python yi_chat9b_api.py
+python api/yi_chat9b_api.py

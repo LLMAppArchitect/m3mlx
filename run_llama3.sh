@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python llama3_api.py
+python api/llama3_api.py

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python deepseek_api.py
+python api/deepseek_api.py
