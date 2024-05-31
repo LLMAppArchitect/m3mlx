@@ -4,6 +4,8 @@ w:
 	./write.sh
 ws:
 	./write_start.sh
+wen:
+	./write_en.sh
 
 run_openchat:
 	./run_openchat.sh
@@ -13,8 +15,6 @@ run_yichat9b:
 	./run_yichat9b.sh
 run_mixtral:
 	./run_mixtral.sh
-run_chinese_mixtral:
-	./run_chinese_mixtral.sh
 run_mixtral_moe:
 	./run_mixtral_moe.sh
 run_llama3:
