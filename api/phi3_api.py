@@ -6,7 +6,7 @@ from mlx_lm import load, generate
 app = FastAPI()
 
 # 加载模型
-model, tokenizer = load("mlx-community/Phi-3-medium-128k-instruct-4bit")
+model, tokenizer = load("mlx-community/Phi-3-medium-128k-instruct-8bit")
 
 
 # 定义输入数据的模型
@@ -27,6 +27,9 @@ def get_generation(input_data: InputData):
             prompt=input_data.prompt,
             max_tokens=input_data.max_tokens,
             verbose=input_data.verbose,
+            repetition_penalty=1.1,
+            # repetition_context_size (int, optional):The number of tokens to consider for repetition penalty (default 20).
+            repetition_context_size=100,
         )
         # 打印结果
         print(response)

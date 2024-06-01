@@ -19,5 +19,7 @@ run_mixtral_moe:
 	./run_mixtral_moe.sh
 run_llama3:
 	./run_llama3.sh
+run_phi3:
+	./run_phi3.sh
 run_deepseek:
 	./run_deepseek.sh
