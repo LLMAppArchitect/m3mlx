@@ -1,6 +1,9 @@
 # 安装
 
 ```bash
+conda create -n m3mlx python=3.11
+conda activate m3mlx
+
 pip install mlx-lm  fastapi uvicorn sentencepiece
 ```
 
