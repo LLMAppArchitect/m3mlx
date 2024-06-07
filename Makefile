@@ -21,5 +21,18 @@ run_llama3:
 	./run_llama3.sh
 run_phi3:
 	./run_phi3.sh
-run_deepseek:
-	./run_deepseek.sh
+
+run_qwen:
+	./run_qwenchat.sh
+run_qwen8000:
+	./run_qwenchat8000.sh
+run_qwen8001:
+	./run_qwenchat8001.sh
+run_qwen8002:
+	./run_qwenchat8002.sh
+run_qwen8003:
+	./run_qwenchat8003.sh
+run_qwen8004:
+	./run_qwenchat8004.sh
+run_qwen8005:
+	./run_qwenchat8005.sh
