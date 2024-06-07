@@ -7,6 +7,24 @@ ws:
 wen:
 	./write_en.sh
 
+wqwen8000:
+	./write_qwen8000.sh
+
+wqwen8001:
+	./write_qwen8001.sh
+
+wqwen8002:
+	./write_qwen8002.sh
+
+wqwen8003:
+	./write_qwen8003.sh
+
+wqwen8004:
+	./write_qwen8004.sh
+
+wqwen8005:
+	./write_qwen8005.sh
+
 run_openchat:
 	./run_openchat.sh
 run_yichat:
