@@ -4,6 +4,10 @@ w:
 	./write.sh
 ws:
 	./write_start.sh
+wsophon:
+	./write_sophon.sh
+
+
 wen:
 	./write_en.sh
 
