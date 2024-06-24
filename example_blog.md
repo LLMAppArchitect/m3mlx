@@ -2,7 +2,7 @@
 
 作者：禅与计算机程序设计艺术 / Zen and the Art of Computer Programming
 
-关键词：Plan-and-Solve策略,Prompt Engineering,多步骤复杂任务,可解释性和可控性,知识库集成
+> 关键词：Plan-and-Solve策略,Prompt Engineering,多步骤复杂任务,可解释性和可控性,知识库集成
 
 ## 1.背景介绍
 
@@ -404,3 +404,6 @@ Plan-and-Solve策略在自然语言处理、机器人控制、医疗健康、金
 
 Plan-and-Solve策略未来的发展方向包括：进一步提升模型的规模和性能，发展多模态学习和自监督学习，优化边缘计算和分布式训练，增强模型的解释性和可控性，确保模型的公平性和减少偏见等。通过不断的研究和创新，Plan-and-Solve策略将能够应对更多复杂任务，发挥更大的作用。
  
+---
+
+作者：禅与计算机程序设计艺术 / Zen and the Art of Computer Programming
