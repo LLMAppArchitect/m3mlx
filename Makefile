@@ -7,6 +7,8 @@ ws:
 wsophon:
 	./write_sophon.sh
 
+write_gemma:
+	./write_gemma.sh
 
 wen:
 	./write_en.sh
@@ -43,6 +45,11 @@ run_llama3:
 	./run_llama3.sh
 run_phi3:
 	./run_phi3.sh
+
+run_gemma:
+	./run_gemma.sh
+run_gemma9b:
+	./run_gemma9b.sh
 
 run_qwen:
 	./run_qwenchat.sh
