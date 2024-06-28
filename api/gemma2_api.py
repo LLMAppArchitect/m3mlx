@@ -1,3 +1,6 @@
+from datetime import datetime
+import time
+
 from fastapi import FastAPI, HTTPException
 import uvicorn
 from pydantic import BaseModel
@@ -6,8 +9,8 @@ from mlx_lm import load, generate
 # 定义FastAPI应用
 app = FastAPI()
 
-# https://huggingface.co/mlx-community/gemma-2-27b-it-4bit
-model, tokenizer = load("mlx-community/gemma-2-27b-it-4bit")
+# https://huggingface.co/mlx-community/gemma-2-9b-it-8bit
+model, tokenizer = load("mlx-community/gemma-2-9b-it-8bit")
 
 
 # 定义输入数据的模型
@@ -20,30 +23,27 @@ class InputData(BaseModel):
 # 定义POST接口
 @app.post("/generate")
 def get_generation(input_data: InputData):
-    messages = [
-        {"role": "user", "content": input_data.prompt}
-    ]
-
-    print(messages)
-
-    text = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
+    print("============================================================")
+    print(input_data.prompt)
+    s = int(time.time())
+    print("开始时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
     try:
         # 调用模型推理函数
         response = generate(
             model,
             tokenizer,
-            prompt=text,
+            prompt=input_data.prompt,
             verbose=True,
-            # max_tokens=input_data.max_tokens
+            max_tokens=input_data.max_tokens
         )
 
         # 打印结果
         print(response)
+
+        t = int(time.time())
+        print("结束时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        print("耗时(s)：", t - s)
 
         # 返回生成结果
         return response
