@@ -20,15 +20,18 @@ class InputData(BaseModel):
     verbose: bool = True
 
 
+seg = "================================================================================================================================"
+
+
 # 定义POST接口
 @app.post("/generate")
 def get_generation(input_data: InputData):
-    print("============================================================")
-    print(input_data.prompt)
-    s = int(time.time())
-    print("开始时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-
     try:
+        print(seg)
+        print(input_data.prompt)
+        s = int(time.time())
+        print("开始时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
         # 调用模型推理函数
         response = generate(
             model,
@@ -39,11 +42,12 @@ def get_generation(input_data: InputData):
         )
 
         # 打印结果
-        print(response)
+        # print(response)
 
         t = int(time.time())
         print("结束时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         print("耗时(s)：", t - s)
+        print(seg)
 
         # 返回生成结果
         return response
