@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="phi3mlx" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="phi3mlx" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="m3mlx" project-jdk-type="Python SDK" />
 </project>

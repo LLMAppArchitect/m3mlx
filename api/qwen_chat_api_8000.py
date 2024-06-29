@@ -9,6 +9,8 @@ app = FastAPI()
 # 加载模型: https://huggingface.co/Qwen/Qwen2-7B-Instruct-MLX
 model, tokenizer = load("Qwen/Qwen2-7B-Instruct-MLX", tokenizer_config={"eos_token": "<|im_end|>"})
 
+seg = "================================================================================================================================"
+
 example_prompt = """
 
 ### 角色 Role ###
@@ -154,9 +156,18 @@ class InputData(BaseModel):
     verbose: bool = True
 
 
+from datetime import datetime
+import time
+
+
 # 定义POST接口
 @app.post("/generate")
 def get_generation(input_data: InputData):
+    print(seg)
+    print(input_data.prompt)
+    s = int(time.time())
+    print("开始时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
     with open("/Users/bytedance/ai/m3mlx/example_blog2.md", 'r') as f:
         example_blog = f.read()
 
@@ -166,7 +177,7 @@ def get_generation(input_data: InputData):
         {"role": "user", "content": input_data.prompt}
     ]
 
-    print(messages)
+    # print(messages)
 
     text = tokenizer.apply_chat_template(
         messages,
@@ -187,7 +198,12 @@ def get_generation(input_data: InputData):
         )
 
         # 打印结果
-        print(response)
+        # print(response)
+
+        t = int(time.time())
+        print("结束时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        print("耗时(s)：", t - s)
+        print(seg)
 
         # 返回生成结果
         return response
