@@ -10,8 +10,9 @@ from mlx_lm import load, generate
 app = FastAPI()
 
 # https://huggingface.co/mlx-community/gemma-2-9b-it-8bit
-model, tokenizer = load("mlx-community/gemma-2-9b-it-8bit")
-
+# model, tokenizer = load("mlx-community/gemma-2-9b-it-8bit")
+# https://huggingface.co/google/gemma-2-9b-it
+model, tokenizer = load("google/gemma-2-9b-it")
 
 # 定义输入数据的模型
 class InputData(BaseModel):
