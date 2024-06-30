@@ -48,10 +48,12 @@ def get_generation(input_data: InputData):
         t = int(time.time())
         print("结束时间：", datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         print("耗时(s)：", t - s)
+        print("总字数：", len(response))
         print(seg)
 
         # 返回生成结果
         return response
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
