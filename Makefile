@@ -48,6 +48,8 @@ run_phi3:
 
 run_gemma:
 	./run_gemma.sh
+run_gemma_8bit:
+	./run_gemma_8bit.sh
 
 run_qwen:
 	./run_qwenchat.sh
