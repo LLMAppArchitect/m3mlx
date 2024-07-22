@@ -10,6 +10,12 @@ wsophon:
 write_gemma:
 	./write_gemma.sh
 
+write_mixtral:
+	./write_mixtral.sh
+
+write_internlm:
+	./write_internlm.sh
+
 wen:
 	./write_en.sh
 
@@ -50,6 +56,8 @@ run_gemma:
 	./run_gemma.sh
 run_gemma_8bit:
 	./run_gemma_8bit.sh
+run_internlm:
+	./run_internlm.sh
 
 run_qwen:
 	./run_qwenchat.sh

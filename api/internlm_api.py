@@ -3,13 +3,11 @@ import uvicorn
 from pydantic import BaseModel
 from mlx_lm import load, generate
 
-# pip install mlx-lm==0.16.0
-
 # 定义FastAPI应用
 app = FastAPI()
 
-# 加载模型: https://huggingface.co/mlx-community/Mistral-Nemo-Instruct-2407-8bit
-model, tokenizer = load("mlx-community/Mistral-Nemo-Instruct-2407-8bit")
+# 加载模型: https://huggingface.co/mlx-community/internlm2_5-7b-chat-8bit
+model, tokenizer = load("mlx-community/internlm2_5-7b-chat-8bit")
 
 # 定义输入数据的模型
 class InputData(BaseModel):
